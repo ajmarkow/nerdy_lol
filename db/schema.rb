@@ -16,18 +16,18 @@ ActiveRecord::Schema.define(version: 2020_11_02_211541) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.bigint "threads_id"
+    t.bigint "discussions_id"
     t.string "topic", array: true
     t.text "content_body"
     t.integer "likes"
-    t.index ["threads_id"], name: "index_posts_on_threads_id"
+    t.index ["discussions_id"], name: "index_posts_on_discussions_id"
   end
 
-  create_table "threads", force: :cascade do |t|
+  create_table "discussions", force: :cascade do |t|
     t.string "title"
     t.string "topic", array: true
     t.text "content_body"
-    t.integer "post_ids", array: true
+    t.integer "post_id", array: true
     t.integer "likes"
   end
 
@@ -43,5 +43,5 @@ ActiveRecord::Schema.define(version: 2020_11_02_211541) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "posts", "threads", column: "threads_id"
+  add_foreign_key "posts", "discussions", column: "discussions_id"
 end

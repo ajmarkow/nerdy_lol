@@ -24,7 +24,7 @@ _For support, please contact:_
 
 * _Garrett Brown <garrettpaulbrown@gmail.com>_
 * _Alma Frankenstein <a.q.frankenstein@gmail.com>_
-* _A.J. Markow_
+* _A.J. Markow <aj@ajm.codes>_
 * _Forrest Reiland <freiland@email.arizona.edu>_
 
 ## Technologies Used

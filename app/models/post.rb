@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  has_one :thread
+  has_one :discussion
 end

@@ -1,4 +1,4 @@
 class ThreadPost < ApplicationRecord
-  belongs_to :thread
+  belongs_to :discussion
   belongs_to :post
 end
