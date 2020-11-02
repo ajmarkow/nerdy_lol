@@ -1,4 +1,4 @@
-# *{Application Name}*
+# *nerdy.lol*
 
 * * *
 {Brief description of application}, 11/2/2020
@@ -16,11 +16,16 @@ By **Garrett P. Brown, Forrest Reiland, Alma Frankenstein**
 
 ## Known Bugs
 
-{Known Bugs}
+* _Currently no known bugs at this time._
 
 ## Support and contact details
 
-{Contact Details}
+_For support, please contact:_
+
+* _Garrett Brown <garrettpaulbrown@gmail.com>_
+* _Alma Frankenstein <a.q.frankenstein@gmail.com>_
+* _A.J. Markow_
+* _Forrest Reiland <freiland@email.arizona.edu>_
 
 ## Technologies Used
 
@@ -48,4 +53,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) 2020 ***Garrett P. Brown, Forrest Reiland, Alma Frankenstein***
+Copyright (c) 2020 ***Garrett P. Brown, Forrest Reiland, Alma Frankenstein, Forrest Reiland***
