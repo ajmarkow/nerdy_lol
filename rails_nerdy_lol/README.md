@@ -1,24 +1,35 @@
-# README
+# README.md Template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# *{Application Name}*
 
-Things you may want to cover:
+* * *
+{Brief description of application}, 11/2/2020
 
-* Ruby version
+By **{List of contributors}**
 
-* System dependencies
 
-* Configuration
+## Description
 
-* Database creation
+{Description}
 
-* Database initialization
+## Setup/Installation Requirements
 
-* How to run the test suite
+{Setup Requirements}
 
-* Services (job queues, cache servers, search engines, etc.)
+## Known Bugs
 
-* Deployment instructions
+{Known Bugs}
 
-* ...
+## Support and contact details
+
+{Contact Details}
+
+## Technologies Used
+
+{Technologies Used}
+
+### License
+
+{License}
+
+Copyright (c) 2020 ***{List of contributors}***
