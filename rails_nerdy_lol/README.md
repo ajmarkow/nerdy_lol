@@ -24,14 +24,15 @@ _For support, please contact:_
 
 * _Garrett Brown <garrettpaulbrown@gmail.com>_
 * _Alma Frankenstein <a.q.frankenstein@gmail.com>_
-* _A.J. Markow <aj@ajm.codes>_
+* _A.J. Markow_
 * _Forrest Reiland <freiland@email.arizona.edu>_
 
 ## Technologies Used
 
 * _Ruby on Rails_
 * _VS Code_
-* _Gem files: PG, Puma, Sass-rails. Uglifier, coffee-rails, turbolinks, jbuilder, devise, dotenv, bootsnap, jquery-rails, byebug, rspec-rails, launchy, pry, shoulda-matchers,
+*Gem files: 
+
 ### License
 
 MIT License
