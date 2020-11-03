@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_174727) do
     t.text "content_body"
     t.integer "likes"
     t.index ["discussions_id"], name: "index_posts_on_discussions_id"
+<<<<<<< HEAD
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -38,6 +39,8 @@ ActiveRecord::Schema.define(version: 2020_11_03_174727) do
     t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
+=======
+>>>>>>> navigation
   end
 
   create_table "users", force: :cascade do |t|

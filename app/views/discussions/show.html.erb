@@ -1,0 +1,26 @@
+  <h4>Some posts about <%= @discussion.topic %>:</h4>
+
+  <%
+=begin%>
+ <% @discussion.post_id.each do |post| %>
+    <ul>
+      <li>
+        <%= link_to post.content_body, discussion_post_path(@discussion, post) %>
+      </li>
+    </ul>
+  <% end %> 
+<%
+=end%>
+
+<p><%= link_to "Add a post", new_discussion_post_path(@discussion) %></p>
+
+<%
+=begin%>
+ <p><%= link_to "Edit topic of discussion", edit_discussion_path(@discussion) %></p> 
+<%
+=end%>
+<p><%= link_to "Delete this discussion", discussion_path(@discussion),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to discussions", discussions_path %></p>
