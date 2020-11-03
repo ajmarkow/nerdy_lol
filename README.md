@@ -2,17 +2,25 @@
 
 ---
 
-{Brief description of application}, 11/2/2020
+A program that functions as a place for you and your friends to chat about nerdy things. 11/2/2020
 
 By **Garrett P. Brown, A.J. Markow, Forrest Reiland, Alma Frankenstein**
 
 ## Description
 
-{Description}
+A program that allows people to create text threads about nerdy subjects. These subjects are generated using API's related to popular fandoms, like "Lord of the Rings" or "Star Wars". 
 
 ## Setup/Installation Requirements
 
-{Setup Requirements}
+* _Open termnial._
+* _Navigate to Desktop._
+* _Type "git clone https://github.com/alma-frankenstein/nerdy_lol.git" in to command line and press ENTER.
+* _Navigate to the root directory of the project in the terminal and type "code ." to view project in an editor like VS Code.
+* _Run "gem install bundler" in command line to install bundler._
+* _Run "bundle install."
+* _To run program, type "rails s" into Terminal._
+* _Go to favorite internet browser and type "localhost:3000" into the address bar.
+* _to run via heroku, put <address> into your browser._
 
 ## Known Bugs
 
