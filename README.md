@@ -31,7 +31,7 @@ _For support, please contact:_
 
 - _Ruby on Rails_
 - _VS Code_
-- \_Gem files: PG, Puma, Sass-rails. Uglifier, coffee-rails, turbolinks, jbuilder, devise, dotenv, bootsnap, jquery-rails, byebug, rspec-rails, launchy, pry, shoulda-matchers,
+- _Gem files: PG, Puma, Sass-rails. Uglifier, coffee-rails, turbolinks, jbuilder, devise, dotenv, bootsnap, jquery-rails, byebug, rspec-rails, launchy, pry, shoulda-matchers_
 
 ### License
 
