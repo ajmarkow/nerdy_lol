@@ -8,7 +8,7 @@ describe Discussion do
   
   #Validation Tests
   it { should validate_presence_of :title }
-  it { should validate_presence_of :topic }
+  
   it { should validate_presence_of :content_body }
 
 end

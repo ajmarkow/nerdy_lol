@@ -17,15 +17,13 @@ ActiveRecord::Schema.define(version: 2020_11_03_210406) do
 
   create_table "discussions", force: :cascade do |t|
     t.string "title"
-    t.string "topic", array: true
     t.text "content_body"
-    t.integer "post_id", array: true
     t.integer "likes"
+    t.integer "topic_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.integer "discussion_id"
-    t.string "topic", array: true
     t.text "content_body"
     t.integer "likes"
     t.index ["discussion_id"], name: "index_posts_on_discussion_id"
@@ -40,8 +38,8 @@ ActiveRecord::Schema.define(version: 2020_11_03_210406) do
     t.string "encrypted_password", default: "", null: false
     t.string "username", default: "", null: false
     t.text "posts", default: [], array: true
-    t.text "topics", default: [], array: true
-    t.boolean "is_admin"
+    t.text "discussions", default: [], array: true
+    t.boolean "is_admin", default: false
     t.text "about_me"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
