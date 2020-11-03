@@ -3,8 +3,11 @@
 
 <% if @discussions.any? %>
   <% @discussions.each do |discussion|%>
-    <%= discussion.name %>
+    <li><%= link_to discussion.title, discussion_path(discussion) %><li>
 <% end %>
 <% else %>
 <p> No one has made a discussion yet. </p>
 <% end %>
+
+<p><%= link_to "Add new discussion", new_discussion_path %></p>
+
