@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.column(:topic, :string, array: true)
       t.column(:content_body, :text)
       t.column(:likes, :integer)
-      t.column(:discussion_id,:integer)
+      t.column(:discussion_id, :integer, array:true)
     end
   end
 end
