@@ -1,0 +1,24 @@
+<h1>New discussion</h1>
+
+ <%
+=begin%>
+ <% if @product.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @product.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>  
+<%
+=end%>
+
+<%= form_for @discussion do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :topic %>
+  <%= f.text_field :topic %>
+  <%= f.label :content_body %>
+  <%= f.text_field :content_body %>
+  <%= f.submit %>
+<% end %>
