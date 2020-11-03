@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'discussions#index'
   devise_for :users
   resources :discussions do
     resources :posts

@@ -1,0 +1,10 @@
+<h1>Welcome to Nerdy.lol!</h1>
+<h2>View or post on an existing thread about your favorite nerdy topic, or start a thread of your own!</h2>
+
+<% if @discussions.any? %>
+  <% @discussions.each do |discussion|%>
+    <%= discussion.name %>
+<% end %>
+<% else %>
+<p> No one has made a discussion yet. </p>
+<% end %>
