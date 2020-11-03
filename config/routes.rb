@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'discussions#index'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth'}
   resources :discussions do
     resources :posts
   end
