@@ -1,10 +1,10 @@
-# *nerdy.lol*
+# _nerdy.lol_
 
-* * *
+---
+
 {Brief description of application}, 11/2/2020
 
-By **Garrett P. Brown, Forrest Reiland, Alma Frankenstein**
-
+By **Garrett P. Brown, A.J. Markow, Forrest Reiland, Alma Frankenstein**
 
 ## Description
 
@@ -16,22 +16,23 @@ By **Garrett P. Brown, Forrest Reiland, Alma Frankenstein**
 
 ## Known Bugs
 
-* _Currently no known bugs at this time._
+- _Currently no known bugs at this time._
 
 ## Support and contact details
 
 _For support, please contact:_
 
-* _Garrett Brown <garrettpaulbrown@gmail.com>_
-* _Alma Frankenstein <a.q.frankenstein@gmail.com>_
-* _A.J. Markow <aj@ajm.codes>_
-* _Forrest Reiland <freiland@email.arizona.edu>_
+- _Garrett Brown <garrettpaulbrown@gmail.com>_
+- _Alma Frankenstein <a.q.frankenstein@gmail.com>_
+- _A.J. Markow <aj@ajm.codes>_
+- _Forrest Reiland <freiland@email.arizona.edu>_
 
 ## Technologies Used
 
-* _Ruby on Rails_
-* _VS Code_
-* _Gem files: PG, Puma, Sass-rails. Uglifier, coffee-rails, turbolinks, jbuilder, devise, dotenv, bootsnap, jquery-rails, byebug, rspec-rails, launchy, pry, shoulda-matchers,
+- _Ruby on Rails_
+- _VS Code_
+- \_Gem files: PG, Puma, Sass-rails. Uglifier, coffee-rails, turbolinks, jbuilder, devise, dotenv, bootsnap, jquery-rails, byebug, rspec-rails, launchy, pry, shoulda-matchers,
+
 ### License
 
 MIT License
@@ -54,4 +55,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) 2020 ***Garrett P. Brown, Forrest Reiland, Alma Frankenstein, Forrest Reiland***
+Copyright (c) 2020 **_Garrett P. Brown, Forrest Reiland, Alma Frankenstein, Forrest Reiland_**
