@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :discussions do
-    resources :posts
-  end
-  root to: 'discussions#index'
-    devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth'}
-  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'discussions#index'
+    resources :discussions do
+      resources :posts
+    end
+devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth'}
+  devise_scope :user do
+    get 'users/sign_in', to: 'users/sessions#new'
+    get 'users/sign_out', to: 'users/sessions#destroy'
+  end
+end
