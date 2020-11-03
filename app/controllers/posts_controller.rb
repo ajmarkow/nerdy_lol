@@ -39,7 +39,9 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    if current_user.admin?
+      @post.destroy
+    end
     redirect_to discussion_path(@post.discussion)
   end
 

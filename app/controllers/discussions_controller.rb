@@ -60,7 +60,9 @@ class DiscussionsController < ApplicationController
 # delete a discussion
   def destroy
     @discussion = Discussion.find(params[:id])
-    @discussion.destroy
+    if current_user.admin?
+      @discussion.destroy
+    end
     redirect_to discussions_path
   end
 

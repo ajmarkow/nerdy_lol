@@ -2,9 +2,11 @@
 <h2>View or post on an existing thread about your favorite nerdy topic, or start a thread of your own!</h2>
 
 <% if @discussions.any? %>
-  <% @discussions.each do |discussion|%>
-    <%= discussion.name %>
+<% @discussions.each do |discussion|%>
+<li><%= link_to discussion.topic, discussion_path(discussion) %></li>
 <% end %>
 <% else %>
 <p> No one has made a discussion yet. </p>
 <% end %>
+
+<p><%= link_to "Add new discussion", new_discussion_path %></p>

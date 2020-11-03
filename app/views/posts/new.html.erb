@@ -1,0 +1,24 @@
+<h1>Add a new post about this discussion:</h1>
+
+<% if @post.errors.any? %>
+<h3>Please fix these errors:</h3>
+<ul>
+  <% @post.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for [@discussion, @post] do |f| %>
+<%= f.label :author %>
+<%= f.text_field :author %>
+<%= f.label :content_body %>
+<%= f.text_field :content_body %>
+<%
+=begin%>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%
+=end%>
+<p><%= f.submit %></p>
+<% end %>
