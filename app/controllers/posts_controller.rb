@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  
   def new
     @discussion = Discussion.find(params[:discussion_id])
     @post = @discussion.posts.new
@@ -18,6 +20,7 @@ class PostsController < ApplicationController
   def show
     @discussion = Discussion.find(params[:discussion_id])
     @post = Post.find(params[:id])
+    # binding.pry
     render :show
   end
 
@@ -38,13 +41,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    # @discussion = Discussion.find(params[:discussion_id])
     @post = Post.find(params[:id])
-    binding.pry
-    # if current_user.admin?
     @post.destroy
-    # end
-    redirect_to discussion_path(@discussion)
+    redirect_to discussion_path(@post.discussion)
   end
 
   # def destroy

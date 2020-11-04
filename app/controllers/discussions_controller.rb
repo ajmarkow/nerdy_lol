@@ -1,4 +1,6 @@
 class DiscussionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   # before_action :only => [:new, :edit] do
   #   redirect_to new_user_session_path unless current_user && current_user.admin
   # end
@@ -60,9 +62,9 @@ class DiscussionsController < ApplicationController
 # delete a discussion
   def destroy
     @discussion = Discussion.find(params[:id])
-    if current_user.admin?
-      @discussion.destroy
-    end
+    # if current_user.admin?
+    @discussion.destroy
+    # end
     redirect_to discussions_path
   end
 
