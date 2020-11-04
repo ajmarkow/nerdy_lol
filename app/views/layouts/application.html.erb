@@ -13,14 +13,16 @@
 <body>
 <nav class ='navbar menu'>
 <h5 class='display-4'>NERDY.LOL</h5>
+
     <p class="navbar-text">
+<div id="menuitems">
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <% end %>
       <%= render 'devise/menu/login_items'%> 
-      <br>
+</div>
     </p>
-    <br>
+
 </nav>
 
   <div>
