@@ -8,8 +8,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :encrypted_password, null: false, default: ""
       t.string :username, null: false, default: ""
       t.text  :posts, array:true, default: []
-      t.text :topics, array:true, default: []
-      t.column(:is_admin, :boolean)
+      t.text :discussions, array:true, default: []
+      t.column(:is_admin, :boolean, default: false)
       t.text :about_me
 
       ## Example

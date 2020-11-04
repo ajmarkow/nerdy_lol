@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2020_11_03_174727) do
   enable_extension "plpgsql"
 
   create_table "discussions", force: :cascade do |t|
-    t.string "topic"
+    t.string "title"
     t.text "content_body"
+    t.integer "likes"
+    t.integer "topic_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -35,14 +37,18 @@ ActiveRecord::Schema.define(version: 2020_11_03_174727) do
     t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
+  
+  create_table "topics", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "username", default: "", null: false
     t.text "posts", default: [], array: true
-    t.text "topics", default: [], array: true
-    t.boolean "is_admin"
+    t.text "discussions", default: [], array: true
+    t.boolean "is_admin", default: false
     t.text "about_me"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

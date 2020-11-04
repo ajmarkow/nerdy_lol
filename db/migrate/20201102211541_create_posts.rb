@@ -7,6 +7,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       # t.column(:likes, :integer)
       t.column(:discussion_id, :integer)
       t.column(:author, :text)
+      t.column(:likes, :integer)
+      
     end
   end
 end
