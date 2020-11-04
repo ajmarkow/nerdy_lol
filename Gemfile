@@ -18,7 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'omniauth-google-oauth2'
 # Rails Session Store (Dependency for OmniAuth)
 gem 'activerecord-session_store'
-
+#Brakeman for Security Testing
+gem "brakeman"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
