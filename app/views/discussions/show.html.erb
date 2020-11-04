@@ -9,21 +9,7 @@
   </ul>
   <% end %>
 
-
   <p><%= link_to "Add a post", new_discussion_post_path(@discussion) %></p>
-
-  <%
-=begin%>
-  <p><%= link_to "Edit topic of discussion", edit_discussion_path(@discussion) %></p>
-  <%
-=end%>
-  <%
-=begin%>
- <p><%= link_to "Delete this discussion", discussion_path(@discussion),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p> 
-<%
-=end%>
 
   <p><%= link_to "Return to discussions", discussions_path %></p>
 

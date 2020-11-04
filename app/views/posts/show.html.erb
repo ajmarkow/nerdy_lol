@@ -5,28 +5,10 @@
 
 <p><%= link_to "Edit post", edit_discussion_post_path(@discussion, @post) %></p>
 
+<p><%= link_to "Return to discussion", discussion_path(@discussion) %></p>
 
 <form action="/discussions/<%= @discussion.id() %>/posts/<%= @post.id() %>" method="post">
   <input name="_method" type="hidden" value="delete" />
 
   <button type="submit">Delete post</button>
 </form>
-
-
-<%
-=begin%>
- <form method="post" action="asdf">
-  <input type="hidden" name="_method" value="delete" />
-  <button type="submit">Delete post</button>
-</form> 
-<%
-=end%>
-
-<%
-=begin%>
-<p><%= link_to "Delete", discussion_post_path(@discussion, @post), :method => "delete",
- :data => { :confirm => "Are you sure?" } %> </p>
-<%
-=end%>
-
-<p><%= link_to "Return to discussion", discussion_path(@discussion) %></p>
