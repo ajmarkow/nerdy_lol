@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+      <%= link_to "Sign out",destroy_user_session_path, :method => :delete %> <% else %>
+<% end %>
+<% if user_signed_in? == false %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= link_to image_tag("btn_google_signin_dark_normal_web.png"), omniauth_authorize_path(resource_name, provider) %><br />
+  <% end %>
+  <%end%>

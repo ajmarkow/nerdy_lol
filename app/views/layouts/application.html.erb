@@ -1,16 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NERDY.LOL</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap" rel="stylesheet">
+</head>
+
 <body>
-  <div class="container-fluid">
+<nav class ='navbar menu'>
+<h5 class='display-4'>NERDY.LOL</h5>
     <p class="navbar-text">
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to "Sign out","/users/sign_out", :method => :delete %> <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
+      <%= render 'devise/menu/login_items'%> 
       <br>
     </p>
     <br>
-  </div>
+</nav>
 
   <div>
     <%= yield %>
