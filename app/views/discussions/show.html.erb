@@ -17,8 +17,18 @@
   <p><%= link_to "Edit topic of discussion", edit_discussion_path(@discussion) %></p>
   <%
 =end%>
-  <p><%= link_to "Delete this discussion", discussion_path(@discussion),
+  <%
+=begin%>
+ <p><%= link_to "Delete this discussion", discussion_path(@discussion),
                          :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
+                                   :method => "delete"} %></p> 
+<%
+=end%>
 
   <p><%= link_to "Return to discussions", discussions_path %></p>
+
+  <form action="/discussions/<%= @discussion.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete" />
+
+  <button type="submit">Delete discussion</button>
+</form>
