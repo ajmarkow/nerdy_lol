@@ -20,7 +20,6 @@ class PostsController < ApplicationController
   def show
     @discussion = Discussion.find(params[:discussion_id])
     @post = Post.find(params[:id])
-    # binding.pry
     render :show
   end
 
@@ -46,16 +45,8 @@ class PostsController < ApplicationController
     redirect_to discussion_path(@post.discussion)
   end
 
-  # def destroy
-  #   @review = Review.find(params[:id])
-  #   @review.destroy
-  #   redirect_to product_path(@review.product)
-  # end
-
   private
     def post_params
-      # params.require(:post).permit(:title, :topic, :content_body, :likes)
       params.require(:post).permit(:author, :content_body, :discussion_id)
-
     end
 end
