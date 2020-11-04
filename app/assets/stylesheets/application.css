@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.menu,
+nav {
+  background-color: #8cb7cf;
+  color: #141415;
+}
+body {
+  background-color: #141415;
+  font-family: "Syne", sans-serif;
+  color: #ebebeb;
+}
+p.navbar-text{
+  vertical-align: middle;
+}
+#menuitems{
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
