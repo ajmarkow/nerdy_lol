@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+<<<<<<< HEAD
+=======
+
+  # skip_before_filter :verify_signed_out_user
+
+>>>>>>> afd9e8398c89684fb3dce2396a5ddc9065d5e22e
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
