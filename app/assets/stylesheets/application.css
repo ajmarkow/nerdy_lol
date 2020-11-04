@@ -44,3 +44,11 @@ p.navbar-text {
   padding-left: 8%;
   padding-top: 4%;
 }
+
+i{
+  margin-top:4%;
+  padding-right:4%;
+}
+i:first-of-type{
+  padding-top:30%;
+}
