@@ -11,6 +11,8 @@
 
   <p><%= link_to "Add a post", new_discussion_post_path(@discussion) %></p>
 
+  <p><%= link_to "Edit name of discussion", edit_discussion_path(@discussion) %></p>
+
   <p><%= link_to "Return to discussions", discussions_path %></p>
 
   <form action="/discussions/<%= @discussion.id() %>" method="post">

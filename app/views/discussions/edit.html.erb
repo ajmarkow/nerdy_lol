@@ -1,0 +1,17 @@
+<h1>Edit discussion</h1>
+
+ <% if @discussion.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @discussion.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %> 
+
+<h3>Change the name of this discussion topic:</h3>
+<%= form_for @discussion do |f| %>
+  <%= f.label :topic %>
+  <%= f.text_field :topic %>
+  <%= f.submit  %>
+<% end %>
