@@ -39,6 +39,7 @@ p.navbar-text {
   padding-bottom: 9999px;
   min-height: 100%;
   overflow: hidden;
+  text-align:justify;
 }
 .col-11 {
   padding-left: 8%;
