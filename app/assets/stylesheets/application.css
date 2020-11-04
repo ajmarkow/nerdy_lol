@@ -18,16 +18,29 @@
 nav {
   background-color: #8cb7cf;
   color: #141415;
+  box-shadow: -50px 20px 20px -15px #915056;
 }
 body {
   background-color: #141415;
   font-family: "Syne", sans-serif;
   color: #ebebeb;
 }
-p.navbar-text{
+p.navbar-text {
   vertical-align: middle;
 }
-#menuitems{
+#menuitems {
   vertical-align: middle;
   padding-bottom: 10px;
+}
+.topicnav {
+  background-color: #5f8b55;
+  color: #141415;
+  margin-bottom: -9999px;
+  padding-bottom: 9999px;
+  min-height: 100%;
+  overflow: hidden;
+}
+.col-11 {
+  padding-left: 8%;
+  padding-top: 4%;
 }

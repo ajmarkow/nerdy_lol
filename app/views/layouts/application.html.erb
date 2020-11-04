@@ -13,7 +13,6 @@
 <body>
 <nav class ='navbar menu'>
 <h5 class='display-4'>NERDY.LOL</h5>
-
     <p class="navbar-text">
 <div id="menuitems">
       <% if user_signed_in? %>
@@ -22,11 +21,13 @@
       <%= render 'devise/menu/login_items'%> 
 </div>
     </p>
-
 </nav>
-
-  <div>
-    <%= yield %>
+  <div class='row'>
+    <div class='col-11'>
+      <%= yield %>
+    </div>
+      <div class='col-1 topicnav'>
+      </div>
   </div>
 </body>
 
