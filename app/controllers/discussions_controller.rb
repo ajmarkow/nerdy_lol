@@ -48,9 +48,12 @@ class DiscussionsController < ApplicationController
 # delete a discussion
   def destroy
     @discussion = Discussion.find(params[:id])
-    # if current_user.admin?
-    @discussion.destroy
-    # end
+    if current_user && current_user.is_admin?
+      @discussion.destroy
+      flash[:alert] = "You deleted a discussion"
+    else 
+      flash[:alert] = "Only admin can delete discussions"
+    end
     redirect_to discussions_path
   end
 
