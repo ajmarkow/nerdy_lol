@@ -44,6 +44,12 @@
         <i class="fas fa-cat fa-3x"></i>
       </div>
   </div>
+
+  <% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+  <% end %>
 </body>
 
 </html>
