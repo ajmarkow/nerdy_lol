@@ -19,6 +19,7 @@ A program that allows people to create text threads about nerdy subjects. These 
 * _Run ```gem install bundler``` in command line to install bundler._
 * _Run ```bundle install```
 * _Change the username and password on lines 23 and 24 of config/database.yml to match yours, or comment those lines if your system doesn't require them
+* _Run ``` rake db:seed```
 * _Run ``` rake db:migrate:reset```
 * _Run ```rake db:test:prepare```
 * _To run program, type ```rails s``` into Terminal._
