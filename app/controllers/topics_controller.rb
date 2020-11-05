@@ -1,7 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :except => [:index, :show] do
-    redirect_to root_path, notice:"Only Latte Larry Can Add Topics. Stay out Mocha Joe." unless current_user && current_user.admin?
-  end
+
 
   def index
     # Code for listing all reviews goes here.
@@ -31,6 +29,8 @@ class TopicsController < ApplicationController
   def show
     # Code for showing a single review goes here.
     @topic = Topic.find(params[:id])
+    @discussions = Discussion.all
+    render :show
   end
 
   def destroy
@@ -43,7 +43,11 @@ class TopicsController < ApplicationController
   def find(id)
     # Code for showing a single review goes here.
     @topic = Topic.find(id.to_i)
-
+  end
+  
+  #  find by topics
+  def findbytopic(id)
+    @discussions = Discussion.findbytopic(id)
   end
 
   private
