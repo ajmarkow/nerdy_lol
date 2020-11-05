@@ -10,5 +10,6 @@ devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth'}
   devise_scope :user do
     get 'users/sign_in', to: 'users/sessions#new'
     get 'users/sign_out', to: 'users/sessions#destroy'
+    get 'users/:id', to: 'users#show'
   end
 end
