@@ -1,0 +1,5 @@
+<h6 class='display-4'><%= @topic.name %> Discussions</h6>
+<%=@discussions.each do |thing|%>
+  <p> Discussion Name: <%= thing.topic %></p>
+  Link to: <%= link_to thing.topic, "/discussions/#{thing.id}" %>
+<% end%>

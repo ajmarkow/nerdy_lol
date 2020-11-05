@@ -10,6 +10,7 @@ class DiscussionsController < ApplicationController
 # form for adding new discussion
   def new
     @discussion = Discussion.new
+    topics= Topic.all
     render :new
   end
 
@@ -44,6 +45,9 @@ class DiscussionsController < ApplicationController
       render :edit
     end
   end
+
+    #  find by topics
+
 
 # delete a discussion
   def destroy
