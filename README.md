@@ -19,10 +19,11 @@ A program that allows people to create text threads about nerdy subjects. These 
 * _Type ```git clone https://github.com/alma-frankenstein/nerdy_lol.git``` in to command line and press ENTER._
 * _Navigate to the root directory of the project in the terminal and type "code ." to view project in an editor like VS Code._
 * _Run ```gem install bundler``` in command line to install bundler._
-* _Run ```bundle install```_
-* _Change the username and password on lines 23 and 24 of config/database.yml to match yours, or comment those lines if your system doesn't require them._
-* _Run ``` rake db:migrate:reset```_
-* _Run ```rake db:test:prepare```_
+* _Run ```bundle install```
+* _Change the username and password on lines 23 and 24 of config/database.yml to match yours, or comment those lines if your system doesn't require them
+* _Run ``` rake db:seed```
+* _Run ``` rake db:migrate:reset```
+* _Run ```rake db:test:prepare```
 * _To run program, type ```rails s``` into Terminal._
 * _Go to favorite internet browser and type "localhost:3000" into the address bar._
 * _To run via heroku, put [https://nerdy.lol/](https://nerdy.lol/) into your browser._
