@@ -16,3 +16,5 @@
   <%= f.text_field :content_body %>
   <%= f.submit  %>
 <% end %>
+
+<p><%= link_to "Return to post", discussion_post_path(@discussion, @post) %></p>

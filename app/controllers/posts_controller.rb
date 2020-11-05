@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!, :only => [:new]
   
   def new
     @discussion = Discussion.find(params[:discussion_id])
@@ -41,7 +42,12 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    if current_user && current_user.is_admin?
+      @post.destroy
+      flash[:alert] = "You deleted a post"
+    else 
+      flash[:alert] = "Only admin can delete a post"
+    end
     redirect_to discussion_path(@post.discussion)
   end
 

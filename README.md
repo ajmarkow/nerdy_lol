@@ -23,7 +23,7 @@ A program that allows people to create text threads about nerdy subjects. These 
 * _Run ```rake db:test:prepare```
 * _To run program, type ```rails s``` into Terminal._
 * _Go to favorite internet browser and type "localhost:3000" into the address bar.
-* _to run via heroku, put <address> into your browser._
+* _to run via heroku, put [https://nerdy.lol/](https://nerdy.lol/) into your browser._
 
 ## Known Bugs
 
