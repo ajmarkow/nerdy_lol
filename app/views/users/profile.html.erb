@@ -1,1 +1,15 @@
-<%=@user.email%>
+<div class="row">
+  <div class='col-5'> User Email:
+  <br>
+  About Me:
+  </div>
+  <div class='col-7'>
+  <%=@user.email%>
+   <%=@user.about_me%>
+  </div>
+  <% form_for @user do|f|%>
+  <%= f.label :about_me %>
+  <%= f.text_field :about_me %>
+  <%= f.submit  %>
+  <% end %>
+</div>
