@@ -1,6 +1,8 @@
 class SubtopicsController < ApplicationController
-  before_action :except => [:index, :show] do
-    redirect_to root_path, notice:"Only Latte Larry Can Add Subtopics. Stay out Mocha Joe." unless current_user && current_user.admin?
+  before_action except: %i[index show] do
+    unless current_user && current_user.admin?
+      redirect_to root_path, notice: 'Only Latte Larry Can Add Subtopics. Stay out Mocha Joe.'
+    end
   end
 
   def index
@@ -43,7 +45,6 @@ class SubtopicsController < ApplicationController
   def find(id)
     # Code for showing a single review goes here.
     @subtopic = Subtopic.find(id.to_i)
-
   end
 
   private

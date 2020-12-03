@@ -10,92 +10,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_05_002327) do
-
+ActiveRecord::Schema.define(version: 20_201_105_002_327) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "discussions", force: :cascade do |t|
-    t.string "topic"
-    t.text "content_body"
-    t.integer "post_id"
+  create_table 'discussions', force: :cascade do |t|
+    t.string 'topic'
+    t.text 'content_body'
+    t.integer 'post_id'
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.bigint "post_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_likes_on_post_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
+  create_table 'likes', force: :cascade do |t|
+    t.bigint 'post_id'
+    t.bigint 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['post_id'], name: 'index_likes_on_post_id'
+    t.index ['user_id'], name: 'index_likes_on_user_id'
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.integer "discussion_id"
-    t.text "content_body"
-    t.text "author"
-    t.index ["discussion_id"], name: "index_posts_on_discussion_id"
+  create_table 'posts', force: :cascade do |t|
+    t.integer 'discussion_id'
+    t.text 'content_body'
+    t.text 'author'
+    t.index ['discussion_id'], name: 'index_posts_on_discussion_id'
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string "session_id", null: false
-    t.text "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
-    t.index ["updated_at"], name: "index_sessions_on_updated_at"
+  create_table 'sessions', force: :cascade do |t|
+    t.string 'session_id', null: false
+    t.text 'data'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['session_id'], name: 'index_sessions_on_session_id', unique: true
+    t.index ['updated_at'], name: 'index_sessions_on_updated_at'
   end
 
-  create_table "subtopics", force: :cascade do |t|
-    t.string "name"
-    t.bigint "topic_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["topic_id"], name: "index_subtopics_on_topic_id"
+  create_table 'subtopics', force: :cascade do |t|
+    t.string 'name'
+    t.bigint 'topic_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['topic_id'], name: 'index_subtopics_on_topic_id'
   end
 
-  create_table "topics", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'topics', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "username", default: "", null: false
-    t.text "posts", default: [], array: true
-    t.text "topics", default: [], array: true
-    t.boolean "is_admin"
-    t.text "about_me"
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
-    t.integer "failed_attempts", default: 0, null: false
-    t.string "unlock_token"
-    t.datetime "locked_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "provider", limit: 50, default: "", null: false
-    t.string "uid", limit: 500, default: "", null: false
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'email', default: '', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'username', default: '', null: false
+    t.text 'posts', default: [], array: true
+    t.text 'topics', default: [], array: true
+    t.boolean 'is_admin'
+    t.text 'about_me'
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.integer 'sign_in_count', default: 0, null: false
+    t.datetime 'current_sign_in_at'
+    t.datetime 'last_sign_in_at'
+    t.inet 'current_sign_in_ip'
+    t.inet 'last_sign_in_ip'
+    t.string 'confirmation_token'
+    t.datetime 'confirmed_at'
+    t.datetime 'confirmation_sent_at'
+    t.string 'unconfirmed_email'
+    t.integer 'failed_attempts', default: 0, null: false
+    t.string 'unlock_token'
+    t.datetime 'locked_at'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'provider', limit: 50, default: '', null: false
+    t.string 'uid', limit: 500, default: '', null: false
+    t.index ['confirmation_token'], name: 'index_users_on_confirmation_token', unique: true
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+    t.index ['unlock_token'], name: 'index_users_on_unlock_token', unique: true
   end
 
-  add_foreign_key "discussions", "posts"
-  add_foreign_key "likes", "posts"
-  add_foreign_key "likes", "users"
-  add_foreign_key "posts", "discussions"
-  add_foreign_key "subtopics", "topics"
+  add_foreign_key 'discussions', 'posts'
+  add_foreign_key 'likes', 'posts'
+  add_foreign_key 'likes', 'users'
+  add_foreign_key 'posts', 'discussions'
+  add_foreign_key 'subtopics', 'topics'
 end

@@ -1,6 +1,4 @@
 class TopicsController < ApplicationController
-
-
   def index
     # Code for listing all reviews goes here.
     @topics = Topic.all
@@ -44,7 +42,7 @@ class TopicsController < ApplicationController
     # Code for showing a single review goes here.
     @topic = Topic.find(id.to_i)
   end
-  
+
   #  find by topics
   def findbytopic(id)
     @discussions = Discussion.findbytopic(id)
